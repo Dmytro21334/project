@@ -1,12 +1,19 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
         Store store = new Store();
+
         store.addProduct("iPhone", 20000);
         store.addProduct("Asus", 25000);
         store.addProduct("Apple Watch", 15000);
         store.addProduct("Canon EOS", 30000);
+
         Scanner scanner = new Scanner(System.in);
+
         int money = scanner.nextInt();
+
         System.out.println(store.purchaseOptions(money));
         store.compareProducts("iPhone", "Asus");
         store.compareProducts("Apple Watch", "Canon EOS");
